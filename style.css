@@ -27,12 +27,21 @@ main{
     position: absolute;
     width: 50vw;
     height: 50vh;
+    
+    overflow: hidden;
+}
+.item{
+    transition: 0.7s;
 }
 .item img{
     width: 50vw;
     height: 50vh;
     object-fit: cover;
     border-radius: 10px;
+    
+}
+.item:first-child{
+    margin-left: -100%;
 }
 .btn{
     display: flex;

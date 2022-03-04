@@ -25,3 +25,22 @@ let loadImagens = (imagens, conteiner) =>{
 };
 //CHAMAR A FUNÇÃO
 loadImagens(imagens, conteiner);
+
+//CRIAR VARIAVEL ITEMS
+let items = document.querySelectorAll('.item');
+
+//FUNÇÕES DOS BOTÕES
+let voltar = () =>{
+    conteiner.appendChild(items[0]);
+    items = document.querySelectorAll('.item');
+};
+
+let passar = () =>{
+    let ult_item = items[items.length -1];
+    conteiner.insertBefore(ult_item, items[0]);
+    items = document.querySelectorAll('.item');
+};
+
+//CHAMAR AS FUNÇÕES
+document.querySelector('#btn_left').addEventListener('click' , voltar);
+document.querySelector('#btn_rigth').addEventListener('click' , passar);
